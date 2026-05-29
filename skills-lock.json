@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-analyze-code-quality": {
+      "source": "ruvnet/ruflo",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agent-analyze-code-quality/SKILL.md",
+      "computedHash": "e5045d5962adff4ea78d1f3cff545b786e3d76b72994913ec2230d24dd1a007a"
+    },
+    "agent-github-modes": {
+      "source": "ruvnet/ruflo",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/agent-github-modes/SKILL.md",
+      "computedHash": "1daeb9afa9aed9095a1625d81693c9bc94732f23954148a2321eb51a62c86c47"
+    },
+    "ce-commit-push-pr": {
+      "source": "everyinc/compound-engineering-plugin",
+      "sourceType": "github",
+      "skillPath": "plugins/compound-engineering/skills/ce-commit-push-pr/SKILL.md",
+      "computedHash": "da352a55a8778abb87f20200c7883a28348b9f56144dd78bdf79253be0fea728"
+    },
+    "deepseek-ocr": {
+      "source": "aradotso/trending-skills",
+      "sourceType": "github",
+      "skillPath": "skills/deepseek-ocr/SKILL.md",
+      "computedHash": "aad3eb372fff9e0ee13a4b6570b4b6aa8f916da2e3eb6fef6fc6d833a4c74837"
+    },
+    "git-commit-push": {
+      "source": "zc277584121/mygitplugin",
+      "sourceType": "github",
+      "skillPath": "skills/git-commit-push/SKILL.md",
+      "computedHash": "58d8e4728e0fea8aa30538e8644c231c7f6d81419f50c1acdf52033eaa830266"
+    },
+    "github-repo-management": {
+      "source": "fanthus/agent-skills",
+      "sourceType": "github",
+      "skillPath": "github-repo-management/SKILL.md",
+      "computedHash": "f0143f546fb1ec6ce307717989ed3bd45944af141ff88bd2e92d650e2296c6c5"
+    },
+    "ocr": {
+      "source": "mr-shaper/opencode-skills-paddle-ocr",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "43e856013353bd83f5ce3ce32c3af1f51f84179b89cf0861bb879819a42bcece"
+    },
+    "python-code-quality": {
+      "source": "laurigates/claude-plugins",
+      "sourceType": "github",
+      "skillPath": "python-plugin/skills/python-code-quality/SKILL.md",
+      "computedHash": "c5571ac20c1160ce4387a1e7f364f6400a1e9c53c1a88debfd0cd8028513ccc5"
+    },
+    "qa-refactoring": {
+      "source": "vasilyu1983/ai-agents-public",
+      "sourceType": "github",
+      "skillPath": "frameworks/shared-skills/skills/qa-refactoring/SKILL.md",
+      "computedHash": "d0811c60ba98125b082e6cc57289613d1c98b6aeea9cf030fd1234c9629243ca"
+    }
+  }
+}

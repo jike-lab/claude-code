@@ -1,0 +1,7 @@
+.env.local
+node_modules/
+npm-debug.log*
+*.log
+.learnings/
+screen*.png
+temp_file.pdf

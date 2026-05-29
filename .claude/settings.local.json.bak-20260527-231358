@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.modelscope.cn)",
+      "Bash(curl *)",
+      "Bash(python3 *)",
+      "Bash(python *)",
+      "Bash(cmd.exe //c python *)",
+      "Bash(cmd.exe //c python3 *)"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": {
+          "pattern": "(如何做|怎么.*做|找.*技能|有没有.*可以|能不能.*做|寻找.*skill|find.*skill|install.*skill|npx skills)",
+          "type": "regex"
+        },
+        "name": "find-skills 钩子",
+        "script": "",
+        "description": "检测用户是否在寻找某项技能"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "claude-code",
+  "version": "1.0.0",
+  "description": "Workspace-local Claude Code setup using a local Anthropic-compatible gateway.",
+  "main": "index.js",
+  "scripts": {
+    "claude": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\start-claude.ps1",
+    "pet": "powershell -NoProfile -Sta -WindowStyle Minimized -ExecutionPolicy Bypass -File .\\scripts\\claude-pet.ps1",
+    "launcher": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\claude-launcher.ps1",
+    "claude:print": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\start-claude.ps1 -Print",
+    "codex:1": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\start-codex-isolated.ps1 1",
+    "codex:2": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\start-codex-isolated.ps1 2",
+    "codex:3": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\start-codex-isolated.ps1 3",
+    "codex:4": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\start-codex-isolated.ps1 4",
+    "test:model": "powershell -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\test-claude-model.ps1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@anthropic-ai/claude-code": "^2.1.146"
+  }
+}

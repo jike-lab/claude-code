@@ -1,0 +1,67 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.modelscope.cn)",
+      "Bash(curl *)"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "根据self-improving-agent技能，检查用户消息是否触发了学习记录条件：用户纠正、命令失败、功能请求、知识盲区。如果触发了，在回复中提示我记录到.learnings/目录。同时检查.learnings/LEARNINGS.md中是否有高优先级未解决条目与当前任务相关。",
+            "timeout": 10,
+            "once": false
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "检查用户消息是否包含以下关键词：操作桌面、桌面自动化、控制屏幕、帮我点、帮我点击、自动操作、computer use、截屏操作、桌面应用。如果包含，回复一条提醒：'用户请求涉及桌面操作，查看 CLAUDE.md 中的 Claude Computer Use 技能部分，使用截屏+视觉方案。'",
+            "timeout": 10,
+            "once": false
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "检查用户消息是否包含以下关键词：读取pdf、提取pdf、pdf转、ocr、提取文字、pdf内容、图片转文字、识别图片、转成md、转成markdown、实验报告、扫描件。如果包含，回复一条提醒：'用户请求涉及PDF/图片提取，查看 CLAUDE.md 中的 OCR 技能部分，注意：PDF中文提取用 pymupdf，不要依赖 Read 工具。'",
+            "timeout": 10,
+            "once": false
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "检查用户消息是否包含以下关键词：浏览器自动化、抓取网页、网页截图、网页测试、ui自动化、puppeteer、playwright、selenium、爬虫、网页数据。如果包含，回复一条提醒：'用户请求涉及浏览器自动化，查看 CLAUDE.md 中的 Browser Automation 技能部分，优先使用 MCP 工具。'",
+            "timeout": 10,
+            "once": false
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "检查用户消息是否包含以下关键词：react、next.js、前端项目、前端开发、组件、打包优化、node.js、后端api、express、数据库、sql、建表、索引优化。如果包含，回复一条提醒：'用户请求涉及前端/后端开发，查看 CLAUDE.md 中的 React 最佳实践/Node.js 后端/数据库技能部分。'",
+            "timeout": 10,
+            "once": false
+          }
+        ]
+      }
+    ]
+  }
+}

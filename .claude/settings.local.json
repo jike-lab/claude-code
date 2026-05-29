@@ -1,0 +1,47 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.modelscope.cn)",
+      "Bash(curl *)",
+      "Bash(python3 *)",
+      "Bash(python *)",
+      "Bash(cmd.exe //c python *)",
+      "Bash(cmd.exe //c python3 *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "toolName == \"WebSearch\" || toolName == \"WebFetch\"",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[TAVILY FIRST] 你在使用 WebSearch/WebFetch！先检查 tavily_search MCP 工具是否可用！\""
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[skill-check] experiment-report-writer-2 (docx), find-skills, ocr(paddle), browser, react, node, database, computer-use\""
+          },
+          {
+            "type": "command",
+            "command": "echo \"[搜索规则] TAVILY MCP 优先！WebSearch 是最后手段，先检查 tavily_search 工具！\""
+          },
+          {
+            "type": "command",
+            "command": "echo \"[Tavily MCP 检查] 运行 npx claude mcp list 确认连接状态\""
+          },
+          {
+            "type": "command",
+            "command": "npx claude mcp list"
+          }
+        ]
+      }
+    ]
+  }
+}
