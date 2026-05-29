@@ -31,6 +31,17 @@
 - **React/Next.js** — 瀑布消除、打包优化、SSR 性能
 - **Node.js** — 错误处理、中间件、DI、异步流
 - **数据库** — SQL 优化、索引、N+1、零停机迁移
+- **GitHub 推送** — PAT 令牌认证、API 建仓库、隐私清除、README 规范，详见 `memory/skill_github-push.md`
+
+## 隐私保护（重要）
+- 文件内容检查：推送前扫描是否含用户真实姓名、学号、身份证号等
+- 含隐私文件不上传；已推送的用 `git filter-branch` 清除历史后 force push
+- 令牌不写入文件，只通过命令行或环境变量传入
+
+## README 规范
+- 每个仓库必须有 README.md
+- 内容：项目简介、快速开始、能力概览、目录结构、环境要求
+- 中文，功能按表格呈现
 
 ## 工作流
 - 学 skill：记 `memory/skill_{name}.md` → 更新 MEMORY.md → 更新本文件 → settings.local.json 加钩子
